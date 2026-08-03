@@ -149,5 +149,4 @@ Interpretation: even the widest FFN matrices are effectively ~390-dim. That conc
 
 **The thesis:** Unit 1 measured *weight* rank (~390/576). Unit 3 measured *activation* reality: only **45 of 1536** dims ever fire for a sentence (2.9% — the collapse is in the *feature set*), while those tokens stay diverse within the active set (k@90% = 5 of 6 — the collapse is *not* in the geometry). Measured against the full 1536-wide space, the live FFN representation is overwhelmingly sparse; this is the empirical basis for pruning and quantization of the never-opened dims, and for LoRA budget in the production repos. Limitation: 6 tokens is a single sentence, not the model's activation distribution.
 
-**Status:** Unit 3 complete. CB 3.1 ✅ (rebuild verified to 9.5e-07), CB 3.2 ✅ (gate reshapes output; SwiGLU dims 94.7% vs ReLU's 50.7% hard kill), CB 3.3 ✅ (union 45/1536 ever-strong; k@90% = 5 of 6 — sparsity in the feature set, diversity within it).
 
